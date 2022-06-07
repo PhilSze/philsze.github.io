@@ -415,6 +415,10 @@ max-width: 100px;
 	opacity: .75;
 }
 
+.portfolio_btn {
+	text-align: center;
+}
+
 /*Pied de page*/
 
 .footer {
