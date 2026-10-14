@@ -1,0 +1,61 @@
+/* Formulaire commun à l’accueil et aux pages du portfolio. */
+.contact-layout > *, .contact-panel, .callback-form, .callback-field { min-width: 0; }
+.contact-panel { width: 100%; }
+.callback-form { display: grid; gap: 1rem; }
+.callback-form h3 { font-size: 1.35rem; margin-bottom: .2rem; }
+.callback-field { display: grid; gap: .4rem; }
+.callback-field label { font-size: .85rem; font-weight: 550; color: var(--paper, #f5f4ee); }
+.callback-field label small { font-size: .75rem; font-weight: 400; color: #d4dfd9; }
+.callback-field input, .callback-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: .8rem .9rem;
+  border: 1px solid #a1b6ac;
+  border-radius: 3px;
+  background: var(--paper, #f5f4ee);
+  color: var(--ink, #202c2a);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.callback-field textarea { resize: vertical; min-height: 110px; }
+.callback-field input:focus-visible, .callback-field textarea:focus-visible {
+  outline: 3px solid var(--accent, #1df1fe);
+  outline-offset: 3px;
+}
+.callback-honeypot { display: none !important; }
+.callback-submit {
+  width: 100%;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--paper, #f5f4ee);
+  border-radius: 3px;
+  background: var(--paper, #f5f4ee);
+  color: var(--green, #173d3a);
+  font-size: .85rem;
+  font-weight: 650;
+  line-height: 1.5;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+  transition: background .2s, color .2s;
+}
+.callback-submit:hover { background: #dce9df; }
+.callback-submit:disabled { opacity: .7; cursor: wait; }
+.contact-layout p.callback-privacy, .contact-layout p.callback-required {
+  font-size: .75rem;
+  line-height: 1.6;
+  color: #d4dfd9;
+}
+.callback-privacy a { white-space: normal; }
+.callback-status { font-size: .85rem; line-height: 1.6; overflow-wrap: anywhere; }
+.callback-status:empty { display: none; }
+.callback-status[data-state="success"] { color: #d1ffe0; }
+.callback-status[data-state="error"] { padding: .7rem .85rem; border: 1px solid #ffc8bf; color: #ffe1da; }
+.contact-panel .contact-links { margin-top: 1.8rem; }
+.contact-panel .contact-links > a { padding-block: 1.2rem; }
+@media (max-width: 720px) {
+  .callback-form { gap: .9rem; }
+  .callback-submit { font-size: .82rem; }
+}

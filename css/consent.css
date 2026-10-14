@@ -1,0 +1,13 @@
+/* Choix de mesure accessible, indépendant du formulaire de contact. */
+.consent-banner { position: fixed; z-index: 50; inset: auto 20px 20px; max-width: 960px; margin-inline: auto; background: var(--paper); color: var(--ink); border: 1px solid var(--line); box-shadow: 0 8px 35px #173d3a26; }
+.consent-inner { display: flex; align-items: center; gap: 2rem; padding: 1.4rem 1.6rem; }
+.consent-copy { flex: 1; min-width: 0; }
+.consent-copy h2 { font-family: inherit; font-size: 1rem; font-weight: 600; line-height: 1.4; letter-spacing: -.015em; margin-bottom: .5rem; }
+.consent-copy p { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+.consent-actions { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.consent-button { min-height: 44px; padding: .65rem 1rem; border: 1px solid var(--green); color: var(--green); background: transparent; font-size: .8rem; cursor: pointer; }
+.consent-button:hover { background: #e5e9df; }
+.consent-privacy { display: inline-block; font-size: .75rem; margin-top: .6rem; color: var(--green); }
+.site-footer { align-items: center; }
+.footer-consent { min-height: 44px; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: 5px; cursor: pointer; }
+@media (max-width: 720px) { .consent-banner { inset: auto 10px 10px; } .consent-inner { display: block; padding: 1rem; } .consent-actions { margin-top: 1rem; } .consent-button { flex: 1; } }
