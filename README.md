@@ -21,7 +21,11 @@ et anonymisés. L’employeur actuel n’est pas affiché dans l’intitulé pub
 Aucune compilation ni installation de dépendances n’est nécessaire. Les fichiers
 peuvent être servis avec un serveur HTTP statique. Les archives gardent leurs URL.
 
-Le conteneur Google Tag Manager déjà présent (`GTM-MRVVN2H`) est conservé.
+Le conteneur Google Tag Manager déjà présent (`GTM-MRVVN2H`) est conservé et chargé
+après accord pour la mesure d'audience. Les événements de contenu, de contact et
+de demande envoyée réutilisent sa Google tag existante. Le formulaire de contact
+transmet les demandes via FormSubmit. Voir `tracking/README.md` pour les paramètres,
+les réglages de compte restants et la validation de réception.
 
 ## Intégration
 
