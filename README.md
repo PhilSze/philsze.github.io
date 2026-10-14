@@ -12,7 +12,10 @@ et anonymisés. L’employeur actuel n’est pas affiché dans l’intitulé pub
 - `img/philippe-portrait-2026.webp` : portrait récent, optimisé pour le chargement.
 - `css/home.css` : styles de l’accueil et adaptations mobile.
 - `js/home.js` : navigation mobile ; le contenu reste accessible sans JavaScript.
-- `portfolio-item*.html`, `css/style.css`, `js/index.js` et `img/` : archives existantes.
+- `portfolio-item_*.html` : dix projets créatifs, avec leurs contenus et URL historiques.
+- `portfolio-item.html` : vue d’ensemble des dix créations.
+- `css/portfolio.css` : styles des fiches projet ; ils complètent les styles partagés de `css/home.css`.
+- `css/style.css` et `js/index.js` : anciens fichiers conservés, désormais inutilisés.
 - `CNAME` : domaine personnalisé existant, à conserver.
 
 Aucune compilation ni installation de dépendances n’est nécessaire. Les fichiers

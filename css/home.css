@@ -183,3 +183,5 @@ details[open] > summary span { transform: rotate(45deg); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+.archive-index-link { display: inline-block; margin-top: 1.25rem; }
