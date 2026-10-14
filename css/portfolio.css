@@ -121,6 +121,7 @@
   font-size: .98rem;
   line-height: 1.85;
   overflow-wrap: break-word;
+  text-align: left;
 }
 .project-content > p:last-child {
   margin-bottom: 0;
@@ -247,6 +248,14 @@
 .project-nav-link:hover strong {
   text-decoration: underline;
   text-underline-offset: 5px;
+}
+/* Justifier les paragraphes longs lorsque la largeur permet une lecture fluide. */
+@media (min-width: 721px) {
+  .project-content > p {
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
+  }
 }
 @media (min-width: 1000px) {
   .project-body {
