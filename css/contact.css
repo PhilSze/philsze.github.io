@@ -43,6 +43,9 @@
 }
 .callback-submit:hover { background: #dce9df; }
 .callback-submit:disabled { opacity: .7; cursor: wait; }
+.callback-verification { background: transparent; color: var(--paper, #f5f4ee); }
+.callback-verification:hover { background: #dce9df; color: var(--green, #173d3a); }
+.callback-verification[hidden] { display: none; }
 .contact-layout p.callback-privacy, .contact-layout p.callback-required {
   font-size: .75rem;
   line-height: 1.6;
