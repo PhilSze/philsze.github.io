@@ -56,15 +56,26 @@ pour leurs explorations. Marquer `generate_lead` comme événement clé si l'obj
 
 Le formulaire est présent dans la section contact de chaque page. L'e-mail est obligatoire ; nom et message
 facultatifs. `js/contact.js` transmet la demande à FormSubmit et affiche une confirmation après une réponse
-HTTP réussie et `success: true`. Les erreurs conservent les champs et ne déclenchent aucun lead.
+HTTP réussie et `success: true`, sans demande explicite d'activation ou de vérification. Les erreurs
+conservent les champs et ne déclenchent aucun lead. Les cas d'activation, vérification, limite de requêtes,
+indisponibilité, réponse illisible, erreur réseau et délai dépassé ont des messages distincts, sans afficher
+le contenu brut du prestataire ni les coordonnées. La requête partage seulement l'origine du site comme
+referrer, et `_url` contient l'origine et le chemin, sans paramètres ni fragment.
+
+Après un échec, le bouton « Continuer avec la vérification » permet au visiteur de choisir un envoi POST
+natif vers la page du prestataire, avec les champs déjà remplis. Ce parcours permet d'afficher les étapes
+de vérification ou d'activation et ne dépend pas de la requête AJAX. Aucun nouvel envoi n'est lancé
+automatiquement : une requête dont la réponse a été perdue pourrait avoir été reçue. Le simple transfert
+vers le parcours natif ne déclenche pas `generate_lead`.
 
 Destination : `philippeszelag@gmail.com`. Lors du premier envoi réel, FormSubmit peut demander au propriétaire
 de confirmer l'activation par e-mail. Les demandes reçues avant activation sont conservées par le prestataire
 jusqu'à confirmation, dans la limite annoncée par son service. Aucun envoi réel ni activation n'a été simulé
 pendant les tests de développement. La délivrabilité e-mail reste à vérifier après cette activation.
 
-Sans JavaScript, le formulaire utilise l'envoi POST natif du prestataire ; son succès n'est pas mesuré par le
-script du site. Le honeypot, les limites de longueur et les protections du prestataire réduisent les soumissions indésirables.
+Sans JavaScript, `fetch` ou `AbortController`, le formulaire utilise l'envoi POST natif du prestataire ;
+son succès n'est pas mesuré par le script du site. Le honeypot, les limites de longueur et les protections
+du prestataire réduisent les soumissions indésirables.
 
 ## Validation
 

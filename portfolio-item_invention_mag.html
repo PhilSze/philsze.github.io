@@ -18,12 +18,12 @@
   <link rel="icon" href="img/favicon.svg?v=ps-2026" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=ps-2026" sizes="180x180">
   <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/contact.css?v=20261014-fix1">
   <link rel="stylesheet" href="css/consent.css">
   <link rel="stylesheet" href="css/portfolio.css">
   <script src="js/home.js" defer></script>
   <script src="js/tracking.js" defer></script>
-  <script src="js/contact.js" defer></script>
+  <script src="js/contact.js?v=20261014-fix1" defer></script>
   <script src="js/consent.js"></script>
 </head>
 <body class="project-page">
@@ -76,6 +76,7 @@
   <button type="submit" class="callback-submit" data-track-contact="form" data-placement="contact">Demander à être recontacté</button>
   <p class="callback-privacy">Vos coordonnées servent uniquement à vous répondre. <a href="confidentialite.html">En savoir plus sur vos données</a>.</p>
   <div id="callback-status" class="callback-status" role="status" aria-live="polite" tabindex="-1"></div>
+  <button id="callback-verification" type="submit" class="callback-submit callback-verification" data-track-contact="form" data-placement="contact" hidden>Continuer avec la vérification</button>
 </form>
 <div class="contact-links"><a href="mailto:philippeszelag@gmail.com" data-track-contact="email" data-placement="contact">M’écrire par e-mail <span aria-hidden="true">↗</span><small>philippeszelag@gmail.com</small></a><a href="https://www.linkedin.com/in/philippe-szelag-91a8701a2/" data-track-contact="linkedin" data-placement="contact">Me retrouver sur LinkedIn <span aria-hidden="true">↗</span></a></div></div></div></section>
   </main>
